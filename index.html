@@ -12,16 +12,35 @@
     margin: 0; padding: 0;
     color: #222;
   }
-  header, footer {
+  header {
     background-color: #0073e6;
     color: white;
     padding: 1rem 2rem;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   header h1 {
     margin: 0;
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     font-weight: 600;
+  }
+  .header-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  .header-buttons a {
+    background-color: #005bb5;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+  }
+  .header-buttons a:hover {
+    background-color: #003f7f;
   }
   main {
     max-width: 860px;
@@ -42,20 +61,6 @@
     margin-bottom: 1rem;
     line-height: 1.6;
     font-size: 1rem;
-  }
-  a.button {
-    display: inline-block;
-    background-color: #0073e6;
-    color: white !important;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 600;
-    margin: 1rem 0;
-    transition: background-color 0.3s ease;
-  }
-  a.button:hover {
-    background-color: #005bb5;
   }
   a {
     color: #0073e6;
@@ -79,6 +84,13 @@
     margin-bottom: 0.3rem;
     font-weight: 700;
   }
+  footer {
+    background-color: #0073e6;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
   footer p {
     margin: 0;
     font-size: 0.9rem;
@@ -88,11 +100,24 @@
       margin: 1rem;
       padding: 1rem;
     }
+    header {
+      flex-direction: column;
+      gap: 0.8rem;
+    }
     header h1 {
       font-size: 1.4rem;
+      text-align: center;
+    }
+    .header-buttons {
+      justify-content: center;
+      width: 100%;
+    }
+    .header-buttons a {
+      font-size: 0.9rem;
+      padding: 0.4rem 1rem;
     }
     h2 {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
     }
   }
 </style>
@@ -101,10 +126,13 @@
 
 <header>
   <h1>How Do I Sign In to My Sling TV Account Easily?</h1>
+  <div class="header-buttons">
+    <a href="https://sling.com/signin" target="_blank" rel="noopener noreferrer">Sign In</a>
+    <a href="https://support.sling.com" target="_blank" rel="noopener noreferrer">Support</a>
+  </div>
 </header>
 
 <main>
-  <p><em>Description:</em> Learn how to access your Sling TV account sign in, fix common login issues, and manage streaming across multiple devices with helpful tips and FAQs.</p>
 
   <p>Sling TV has become a leading choice for people looking to cut the cord and switch to flexible, internet-based television. With live channels, on-demand shows, and easy-to-use apps, it delivers a modern viewing experience. But everything starts with one essential step—knowing how to use your Sling TV account sign in.</p>
 
@@ -116,16 +144,16 @@
   <p>Once you create an account at <a href="https://sling.com" target="_blank" rel="noopener noreferrer">sling.com</a>, your login information remains the same across all devices, including smart TVs, mobile phones, tablets, and web browsers. Whether you’re at home or traveling, you can sign in and enjoy your shows with ease.</p>
 
   <h2>How to Sign In to Your Sling TV Account</h2>
-  <p>To access Sling TV through a browser, visit the official site <a href="https://sling.com" target="_blank" rel="noopener noreferrer">sling.com</a> and click the <a href="https://sling.com" class="button" target="_blank" rel="noopener noreferrer">Sign In</a> button in the top-right corner. Enter your email address and password that you used during sign up. Once logged in, you'll be directed to your dashboard where you can begin streaming or manage your subscription.</p>
+  <p>To access Sling TV through a browser, visit the official site <a href="https://sling.com" target="_blank" rel="noopener noreferrer">sling.com</a> and click the <a href="https://sling.com/signin" target="_blank" rel="noopener noreferrer">Sign In</a> button in the top-right corner. Enter your email address and password that you used during sign up. Once logged in, you'll be directed to your dashboard where you can begin streaming or manage your subscription.</p>
 
-  <p>If you're using a mobile device, open the Sling TV app. Tap the <a href="#" class="button">Sign In</a> option, input your email and password, and you’ll be ready to stream. Most mobile apps will keep you signed in unless you log out manually.</p>
+  <p>If you're using a mobile device, open the Sling TV app. Tap the Sign In option, input your email and password, and you’ll be ready to stream. Most mobile apps will keep you signed in unless you log out manually.</p>
 
-  <p>For smart TVs and devices like Roku, Amazon Fire Stick, or Apple TV, launch the Sling TV app and select <a href="#" class="button">Sign In</a>. In some cases, you’ll see a code on your screen. Visit <a href="https://sling.com/activate" target="_blank" rel="noopener noreferrer">sling.com/activate</a> from another device, log in, and enter the code to link the device with your account.</p>
+  <p>For smart TVs and devices like Roku, Amazon Fire Stick, or Apple TV, launch the Sling TV app and select Sign In. In some cases, you’ll see a code on your screen. Visit <a href="https://sling.com/activate" target="_blank" rel="noopener noreferrer">sling.com/activate</a> from another device, log in, and enter the code to link the device with your account.</p>
 
   <h2>Fixing Sling TV Account Sign In Issues</h2>
   <p>Sometimes you may face issues signing in, but most of them are easy to fix.</p>
 
-  <p>If you forget your password, click the <a href="https://sling.com/forgot-password" class="button" target="_blank" rel="noopener noreferrer">Forgot Password</a> link on the login screen. Sling will send a reset link to your email. Make sure to check your spam or junk folder if you don’t see it.</p>
+  <p>If you forget your password, click the <a href="https://sling.com/forgot-password" target="_blank" rel="noopener noreferrer">Forgot Password</a> link on the login screen. Sling will send a reset link to your email. Make sure to check your spam or junk folder if you don’t see it.</p>
 
   <p>Incorrect login credentials are another common cause of problems. Double-check your email address and password. Keep in mind that login details are case-sensitive, and even a small typo can block access.</p>
 
